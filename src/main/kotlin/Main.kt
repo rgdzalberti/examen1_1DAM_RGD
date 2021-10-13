@@ -17,33 +17,56 @@ fun main(){
     println("*".repeat(80))
 
     //Pregunto la edad y convierto el String del readLine() a un Int
+    //Además utilizo un try catch para asegurarme de que el input no es nada o un string
 
     while(check==1) {
 
         print("Introduzca la edad: ")
-        edad = Integer.valueOf(readLine())
+
+        try 
+        {
+            edad = Integer.valueOf(readLine())
+        }
+        catch(e: java.lang.NumberFormatException)
+        {
+            //Aquí iria un mensaje notificando de que meta un número válido pero puesto que el else de abajo salta con un mensaje de error
+            //esto no es necesario. Pero en el caso de hacerlo se podria solventar usando por ejemplo una variable que cambie cuando sale del catch
+        }
 
         if (edad in (6..12)){
             check = 0
         }
         else {
-            println("Esa edad no se contempla, por favor introduzca una edad entre 6 y 12")
+            println("Esa edad no se contempla, por favor introduzca una edad entre 6 y 12.")
+            println("Tenga en cuenta que si introduce un input vacio o string no funcionará.")
         }
 
     }
     println("")
 
     //Pregunto el mes y convierto el String del readLine() a un Int
+    //Además utilizo un try catch para asegurarme de que el input no es nada o un string
+    
     while(check2==1) {
 
         print("Introduzca el mes: ")
-        mes = Integer.valueOf(readLine())
+
+        try
+        {
+            mes = Integer.valueOf(readLine())
+        }
+        catch(e: java.lang.NumberFormatException)
+        {
+            //Aquí iria un mensaje notificando de que meta un número válido pero puesto que el else de abajo salta con un mensaje de error
+            //esto no es necesario. Pero en el caso de hacerlo se podria solventar usando por ejemplo una variable que cambie cuando sale del catch
+        }
 
         if (mes in (1..12)){
             check2 = 0
         }
         else {
-            println("Este mes es erroneo, introduzca uno entre 1 y 12")
+            println("Este mes es erroneo, introduzca uno entre 1 y 12.")
+            println("Tenga en cuenta que si introduce un input vacio o string no funcionará.")
         }
 
     }
