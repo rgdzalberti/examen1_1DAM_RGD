@@ -191,7 +191,7 @@ fun main(){
 
             println("-".repeat(80))
             println("Edad $edad, el alumno está dentro del rango [10,12]")
-            println("Tanto a los meses impares y pares se les asignará las mismas tablas, es decir, las tablas {11,12,13}")
+            println("Tanto a los meses impares y pares se les asignará las mismas tablas en este caso, es decir, las tablas {11,12,13}")
             println("-".repeat(80))
 
                 println("")
